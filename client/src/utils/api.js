@@ -79,7 +79,7 @@ api.interceptors.response.use(
       try {
         console.log('Attempting to refresh token...')
         // Try to refresh the token
-        const response = await axios.get('/api/auth/refresh-token', {
+        const response = await axios.get('/auth/refresh-token', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           },
